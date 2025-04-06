@@ -70,9 +70,14 @@ The system consists of the following components:
 ### Query for Storage
 
 ```sql
-SELECT *
-INTO storage_output
-FROM iot_input
+SELECT
+    System.Timestamp AS event_time,
+    AVG(temperature) AS avg_temperature,
+    AVG(vibration) AS avg_vibration,
+    AVG(power_usage) AS avg_power_usage
+INTO SensorOutput
+FROM SensorInput
+GROUP BY TumblingWindow(hour,1)
 ```
 
 ## 4. Azure Blob Storage
