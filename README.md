@@ -1,4 +1,4 @@
-# Industrial Equipment Monitoring System with Predictive Maintenance
+# AZURE Industrial Equipment Monitoring System with Predictive Maintenance
 
 ## Overview
 
